@@ -1,0 +1,22 @@
+.content img{
+    margin-top:20px;
+    height:250px;
+    width: 200px;
+    border-radius: 30px;
+}
+.content{
+    background-color: #f1ffd6;
+    padding-bottom: 50px;
+    font-family: "Open Sans", sans-serif !important;
+}
+.content h2{
+    text-align: left;
+    padding-top:125px;
+}
+#position1{
+    padding-bottom: 40px;
+}
+.content .col{
+    text-align: justify;
+    font-size: 18px;
+}

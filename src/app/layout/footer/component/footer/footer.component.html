@@ -1,0 +1,39 @@
+<div class="content">
+<div class="row">
+<div class="col left">
+    <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Egzotični ljubimci</h5>
+        <p>Reptili mogu biti odlični kućni ljubimci, ali neiskusni vlasnici obično budu iznenađeni obimom brige i troškova koje ove životinje iziskuju. Na žalost mnogi vlasnici uzimaju ovakve životinje bez dovoljno pripreme i predznanja koja su neophodna za njihovu brigu, a ovo na kraju vodi nezadovoljstvu vlasnika i zdravstvenim problemima reptila. Sve se ovo može lako izbeći uz malo truda i informisanja.</p>
+</div>
+<div class="col">
+    <div class="socialNetwors">
+        <ul class="social-network social-circle"> 
+        <li> 
+            <a class="icoLinkedin" href='https://www.linkedin.com/in/priyank1205' title='Linkedin'> <i class="fa fa-linkedin"> </i> </a>
+        </li>
+        <li> 
+            <a class="icoTwitter" href='https://twitter.com/priyank1205' title='Twitter'> <i class="fa fa-twitter"> </i> </a>
+        </li>
+        <li> 
+            <a class="icoFacebook" href='https://www.facebook.com' title='Facebook'> <i class="fa fa-facebook"> </i> </a>
+        </li>
+        <li> 
+            <a class="icoInstagram" href='https://www.instagram.com' title='Instagram'> <i class="fa fa-instagram"> </i> </a>
+        </li>
+    </ul> 
+</div> 
+</div>
+<div class="col">
+    <div class="row">
+        <div class="col">
+            <div  class="menuItem row" *ngFor="let link of menu"> 
+              <a class="nav-link" routerLink="{{link.path}}">{{link.title}}</a> 
+            </div>
+        </div>
+        <div class="col copyright"> 
+            <p>Copyright &copy; &nbsp; {{ datum | date:"dd/MM/yyyy" }} Mici.  </p>
+        </div>
+            
+        </div> 
+</div>
+</div>
+</div>

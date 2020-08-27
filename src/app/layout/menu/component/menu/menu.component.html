@@ -1,0 +1,7 @@
+<div id="mainMenu">
+    <div  class="row">
+        <div class="col menuItem" *ngFor="let link of menu"> 
+          <a class="nav-link" routerLink="{{link.path}}">{{link.title}}</a>
+        </div>
+        </div>
+</div>

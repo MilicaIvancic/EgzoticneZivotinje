@@ -1,0 +1,60 @@
+<div class="content">
+    <div class="drzac"> 
+    <div class="center">
+      <h2>Javite nam se</h2>
+      <p>Ako imate neka pitanja popunite sledeći formular.</p>
+      <div [@showHide]="isMessageDisplayed" class="alert alert-success">
+          Message sent successfully.
+      </div>
+    </div>
+    <div class="d-flex justify-content-center">
+      <div class="col-sm-5 col-sm-offset-2">
+        <form action="" method="post" role="form" class="contactForm" [formGroup]="contactForm" (ngSubmit)="onFormSubmit()">
+          <div class="form-group">
+            <input type="text" name="name" class="form-control" id="name" placeholder="Vaše ime i prezime" formControlName="fullName" #fullName (click)="onFormChanged()"/>
+            <div *ngIf="!contactForm.get('fullName').valid && contactForm.get('fullName').touched">
+              <p style="color: red;">Molimo unesite validno ime i prezime npr: (Pera perić)</p>
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control" name="email" id="email" placeholder="Vaše Email" formControlName="email" #email (click)="onFormChanged()"/>
+            <div *ngIf="!contactForm.get('email').valid && contactForm.get('email').touched">
+                <p style="color: red;">Molimo unesite ispravan Email npr: (example@gmail.com)</p>
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="subject" id="subject" placeholder="Naslov" formControlName="subject" #subject (click)="onFormChanged()"/>
+            <div *ngIf="!contactForm.get('subject').valid && contactForm.get('subject').touched">
+                <p style="color: red;">Naslov mora imati  5-20 karaktera</p>
+            </div>
+          </div>
+          <div>Izaberi omiljenu životinju</div> <br/>
+          <div class="row">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div class="radio col" *ngFor="let x of zivotinje">
+                <label>
+                  <input type="radio" data-id="{{x}}"name="animal" formControlName="animal" value="{{x}}" (change)="onItemChange($event.target)" (click)="onFormChanged()"> &nbsp;{{ x }} 
+                </label>
+              </div>
+          </div>
+          <div *ngIf="odabranaZivotinje==''">
+            <p style="color: red;">Molimo odaberite omiljenu životinju</p>
+        </div>
+          <div class="form-group">
+              <input class="form-control" value="{{odabranaZivotinje}}" readonly >
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" name="message" rows="5" placeholder="Sadržaj" formControlName="message" #message (click)="onFormChanged()"></textarea>
+            <div *ngIf="!contactForm.get('message').valid && contactForm.get('message').touched">
+                <p style="color: red;">Sadržaj mora imati 5-300 karaktera</p>
+            </div>
+          </div>
+
+          <div class="text-center"><button type="submit" class="btn btn-secondary btn-lg" [disabled]="!contactForm.valid">Pošaljite poruku</button></div>
+        </form>
+        <br/>
+        <br/>
+        <br/>
+      </div>
+    </div>
+    </div>
+  </div>

@@ -1,0 +1,29 @@
+#headerElement{
+    margin: 0 auto;
+    background-color:#b6f542;
+    font-family: "Open Sans", sans-serif !important;
+}
+.cleaner{
+    clear: both;
+}
+.logo{
+    width: 180px;
+    height: 180px;
+    border: 1px solid green;
+    border-radius: 150px;
+    margin: 7px 20px 7px 20px;
+}
+#name {
+    margin-top:50px;
+    text-align: center;
+}
+#name a{
+    text-decoration: none;
+    color:black;
+    padding:30px
+}
+#name a:hover {
+    background-color: green;
+    border-radius: 50px;
+    color:white;
+  }

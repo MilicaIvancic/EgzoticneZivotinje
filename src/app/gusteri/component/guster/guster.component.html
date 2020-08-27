@@ -1,0 +1,16 @@
+<div class="content">
+    <h1> Gušteri</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-md-4 element1" *ngFor = "let x of gusteri">
+          <img class="img-thumbnail" src="../../../../assets/images/{{x.slika}}" alt={{x.name}}>
+          <div class="middle1">
+            <a [routerLink]="['/gusteri', x.id]"> <div class="text">{{x.name}}</div> </a>
+            <br/>
+            <div> <p>{{x.shortDescription}}</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  

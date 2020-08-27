@@ -1,0 +1,27 @@
+[
+    {
+        "id" : 1,
+        "title":"Gušteri",
+        "path":"/gusteri"
+    },
+    {
+        "id" : 2,
+        "title":"Zmije",
+        "path":"/zmije"
+    },
+    {
+        "id" : 3,
+        "title":"Tarantule",
+        "path":"/tarantule"
+    },
+    {
+        "id" : 4,
+        "title":"Kontakt",
+        "path":"/contact"
+    },
+    {
+        "id" : 5,
+        "title":"O autoru",
+        "path":"/autor"
+    }
+]
