@@ -64,3 +64,11 @@
       padding:30px 40px 10px 40px;
       border-radius: 30px;
   }
+
+  a{
+    text-decoration:none;
+    color:black;
+  }
+  #opis a:hover{
+    color:green;
+  }
